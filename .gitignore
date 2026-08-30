@@ -1,2 +1,8 @@
-# Ignore macOS dSYM debug artifacts
+# Ignore macOS debug and build artifacts
 *.dSYM/
+*.app/
+*.exe
+*.out
+*.o
+*.obj
+*.bin
