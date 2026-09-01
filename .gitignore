@@ -1,8 +1,13 @@
-# Ignore macOS debug and build artifacts
-*.dSYM/
-*.app/
-*.exe
-*.out
-*.o
-*.obj
-*.bin
+# 1. Ignore all files in the repository
+*
+
+# 2. Re-include all directories (so Git can scan subfolders)
+!*/
+
+# 3. Re-include all files that contain a dot extension (e.g., .txt, .py, .js)
+!*.*
+
+# 4. (Optional) Re-include specific extensionless files you DO want to track
+!Makefile
+!Dockerfile
+!LICENSE
