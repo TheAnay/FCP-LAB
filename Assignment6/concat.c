@@ -25,6 +25,7 @@ int main()
         i++;
         j++;
     }
+	s1[i] = '\0';
 
     /* Output section */
     printf("Concatenated string = %s\n", s1);
