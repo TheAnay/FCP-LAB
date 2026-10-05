@@ -3,25 +3,30 @@
 
 int main()
 {
+    /* Variable decleration */
     int n, i;
     int sum = 0, sub, mul = 1;
     int *ptr;
 
+    /* Input section */
     printf("Enter number of elements: ");
     scanf("%d", &n);
 
-    ptr = (int *)malloc(n * sizeof(int));   /* allocate memory for n integers */
+    /* allocate memory for n integers */
+    ptr = (int *)malloc(n * sizeof(int));   
 
-    if (ptr == NULL)   /* check if memory was allocated */
+    /* checking if memory was allocated */
+    if (ptr == NULL)   
     {
         printf("Memory not allocated");
         return 0;
     }
 
     printf("Enter %d numbers:\n", n);
+    /* store each number using the pointer */
     for (i = 0; i < n; i++)
     {
-        scanf("%d", ptr + i);   /* store each number using the pointer */
+        scanf("%d", ptr + i);   
     }
 
     printf("\nElements are: ");
@@ -30,25 +35,27 @@ int main()
         printf("%d ", *(ptr + i));
     }
 
-    sub = *ptr;   /* subtraction starts with the first element */
+    sub = *ptr;   
 
+     /* Arithmatic Operations */
     for (i = 0; i < n; i++)
     {
-        sum = sum + *(ptr + i);   /* add all elements */
-        mul = mul * *(ptr + i);   /* multiply all elements */
+        sum = sum + *(ptr + i);   
+        mul = mul * *(ptr + i);  
 
         if (i > 0)
         {
-            sub = sub - *(ptr + i);   /* subtract the remaining elements from the first */
+            sub = sub - *(ptr + i);   
         }
     }
 
+    /* Output Section */
     printf("\nSum = %d", sum);
     printf("\nSubtraction = %d", sub);
     printf("\nMultiplication = %d", mul);
     printf("\n");
 
-    free(ptr);   /* release the memory */
+    free(ptr);   
 
     return 0;
 }
