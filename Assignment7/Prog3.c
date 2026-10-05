@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h> /* Required for malloc and free */
+#include <stdlib.h> 
 
 int main() {
+    /* Variable decleration */
     int *ptr;
     
-    /* Allocating memory for 3 integers dynamically */
+    /* Memory allocation */
     ptr = (int*) malloc(3 * sizeof(int));
     
     /* Storing values in the allocated memory */
@@ -12,6 +13,7 @@ int main() {
     ptr[1] = 60;
     ptr[2] = 70;
     
+    /* Output section */
     printf("First dynamically allocated value: %d\n", ptr[0]);
     printf("Second dynamically allocated value: %d\n", ptr[1]);
     
