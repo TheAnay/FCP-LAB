@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/* Variable decleration */
 struct Employee {
     char name[50];
     int id;
@@ -7,6 +8,7 @@ struct Employee {
     float salary;
 };
 
+/* Input section */
 int main() {
     int n, i;
     printf("Enter number of employees: ");
@@ -26,6 +28,7 @@ int main() {
         scanf("%f", &emp[i].salary);
     }
 
+    /* Output section */
     printf("\n--- Employee Records ---\n");
     for(i = 0; i < n; i++) {
         printf("\nID: %d | Name: %s | Dept: %s | Salary: %.2f\n", 

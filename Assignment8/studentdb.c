@@ -1,11 +1,13 @@
 #include <stdio.h>
 
+/* Variable decleration */
 struct Student {
     char name[50];
     int roll_no;
     float marks[3];
 };
 
+/* Input section */
 int main() {
     int n, i;
     printf("Enter number of students: ");
@@ -23,6 +25,7 @@ int main() {
         scanf("%f %f %f", &s[i].marks[0], &s[i].marks[1], &s[i].marks[2]);
     }
 
+    /* Output section */
     printf("\n--- Student Database ---\n");
     for(i = 0; i < n; i++) {
         printf("\nStudent %d\n", i + 1);
